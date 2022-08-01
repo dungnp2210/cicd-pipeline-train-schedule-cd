@@ -29,7 +29,7 @@ pipeline {
                                         sourceFiles: 'dist/trainSchedule.zip',
                                         removePrefix: 'dist/',
                                         remoteDirectory: '/tmp',
-                                        execCommand: 'sudo /usr/bin/systemctl stop apache2 && rm -rf /var/www/html && unzip /tmp/trainSchedule.zip -d /var/www/html && sudo /usr/bin/systemctl start apache2'
+                                        execCommand: 'sudo /usr/bin/systemctl stop apache2 && sudo rm -rf /var/www/html && sudo unzip /tmp/trainSchedule.zip -d /var/www/html && sudo /usr/bin/systemctl start apache2'
                                     )
                                 ]
                             )
